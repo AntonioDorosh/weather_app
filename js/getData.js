@@ -1,7 +1,7 @@
 import {api} from "./api/api.js";
 import {getResult} from "./getResult.js";
-import {searchInput} from "./constant.js";
 import {showError} from "./error.js";
+import {searchInput} from "./constant.js";
 
 const getData = async (query) => {
     try {
@@ -9,8 +9,8 @@ const getData = async (query) => {
         const weather = await response.json();
         await getResult(weather)
     } catch (e) {
-        console.log(e)
         showError()
+        throw new Error(showError)
     }
 }
 
