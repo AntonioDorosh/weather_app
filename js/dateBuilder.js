@@ -1,4 +1,4 @@
-export const dateBuilder = (d) => {
+export const dataBuilder = (d) => {
     const months = [
         'January',
         'February',
@@ -13,6 +13,7 @@ export const dateBuilder = (d) => {
         'November',
         'December'
     ];
+
     const days = [
         'Sunday',
         'Monday',
@@ -20,13 +21,13 @@ export const dateBuilder = (d) => {
         'Wednesday',
         'Thursday',
         'Friday',
-        'Saturday'
+        'Saturday',
     ];
 
     const day = days[d.getDay()];
-    const date = d.getDate();
     const month = months[d.getMonth()];
     const year = d.getFullYear();
+    const date = d.getDate();
 
     return `${day} ${date} ${month} ${year}`
 }

@@ -1,10 +1,6 @@
 import {setQuery} from "./js/getData.js";
-
-export const searchInput = document.querySelector('.search-box');
-
+import {searchInput} from "./js/constant.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('keypress', setQuery)
 })
-
-
